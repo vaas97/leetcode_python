@@ -85,6 +85,24 @@ class TestSolution(unittest.TestCase):
     added = s.addTwoNumbers(l1, l2)
     self.assertTrue(added.equals(l3))
 
+  def test4(self):
+    s = Solution()
+    # None + 125 = 125
+    l1 = None
+    l2 = ListNode(5, ListNode(2, ListNode(1)))
+    l3 = ListNode(5, ListNode(2, ListNode(1)))
+    added = s.addTwoNumbers(l1, l2)
+    self.assertTrue(added.equals(l3))
+
+  def test5(self):
+    s = Solution()
+    # None + None = None
+    l1 = None
+    l2 = None
+    l3 = None
+    added = s.addTwoNumbers(l1, l2)
+    self.assertTrue(added is None)
+
 # Run unit tests
 if __name__ == '__main__':
   unittest.main()
